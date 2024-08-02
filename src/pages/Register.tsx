@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import HeadingPage from '../components/HeadingPage'
 import { Link, useNavigate } from 'react-router-dom'
 import { IoArrowBack, IoMailOutline, IoLockClosedOutline, IoEyeOffOutline, IoEyeOutline } from "react-icons/io5"
 
@@ -34,6 +35,7 @@ const Register = () => {
     }  
     return (
         <>
+            <HeadingPage title='Register page' content='Register page'/>
             <form className='max-w-[400px] rounded-lg p-6 mt-5' onSubmit={handleSubmit(onSubmit)}>
                 <div className='flexx mb-3 cursor-pointer' onClick={() => navigate('/')}>
                     <IoArrowBack className='text-primary text-lg mr-3'/>

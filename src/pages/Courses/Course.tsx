@@ -5,6 +5,7 @@ import queryString from 'query-string'
 import { IoClose } from 'react-icons/io5'
 import QuizTimer from '../../components/QuizTimer'
 import QuizItem from '../../components/Quiz/QuizItem'
+import HeadingPage from '../../components/HeadingPage'
 import { useLocation, useNavigate } from 'react-router-dom'
 import QuizNavigation from '../../components/QuizNavigation'
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
@@ -71,6 +72,7 @@ const Course = () => {
 
     return (
         <>
+            <HeadingPage title='Course page' content='Course page'/>
             <div className='mt-14'>
                 {isLoading ? (
                     <div className='flex-center'>
