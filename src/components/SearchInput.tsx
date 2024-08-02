@@ -28,7 +28,7 @@ const SearchInput = () => {
     
     return (
         <div className={clsx('w-full flexx border rounded-lg px-4', isFocus ? 'border-2 border-primary' : 'border-[#ccc]')}>
-            <IoSearch className='text-xl text-primary mr-5'/>
+            <IoSearch className='text-lg sm:text-xl text-primary mr-5'/>
             <input 
                 type="text"
                 value={queries?.q as string || ''} 
@@ -36,7 +36,7 @@ const SearchInput = () => {
                 onBlur={() => setIsFocus(false)} 
                 onFocus={() => setIsFocus(true)} 
                 className='flex-1 text-primary outline-none py-2' placeholder='Enter your course'/>
-            {queries?.q && <IoClose className='text-xl text-red-500 ml-3 cursor-pointer' onClick={handleReset}/>}
+            {queries?.q && <IoClose className='text-lg sm:text-xl text-red-500 ml-3 cursor-pointer' onClick={handleReset}/>}
         </div>
     )
 }
