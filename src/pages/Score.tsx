@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import HeadingPage from '../components/HeadingPage'
-
 import { useQuizStore } from '../store/quizStore'
 import { useUserStore } from '../store/userStore'
 import { useAnswerStore } from '../store/answerStore'
@@ -58,7 +56,6 @@ const Score = () => {
     
     return (
         <>
-            <HeadingPage title='Score page' content='Score page'/>
             <div className='mt-14 text-primary'>
                 <div className='flex-center flex-col'>
                     <h1 className='text-3xl font-semibold'>Your Quiz Score</h1>
