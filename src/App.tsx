@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import clsx from 'clsx'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -10,8 +11,24 @@ import Courses from './pages/Courses/Courses'
 import PageNotFound from './pages/PageNotFound'
 import QuizResume from './components/QuizResume'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
+import { useUserStore } from './store/userStore'
+import { useAnswerStore } from './store/answerStore'
+import { useSubmittingStore } from './store/submittingStore'
 
 const App = () => {
+    const location = useLocation()
+    const { setUsername } = useUserStore()
+    const { setAnswers } = useAnswerStore()
+    const { isSubmitQuiz, setSubmitQuiz } = useSubmittingStore()
+
+    useEffect(() => {
+        if(isSubmitQuiz && location.pathname !== '/score') {
+            setSubmitQuiz(false)
+            setAnswers([])
+            setUsername(null)
+        }
+    }, [isSubmitQuiz, location.pathname])
+    
     return (
         <Routes>
             <Route element={<AppLayout/>}>
