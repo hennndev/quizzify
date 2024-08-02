@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { IoArrowBack } from 'react-icons/io5'
-import { useAuthStore } from '../store/authStore'
-import HeadingPage from '../components/HeadingPage'
 import { Link, useNavigate } from 'react-router-dom'
 import { IoMailOutline, IoLockClosedOutline, IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
@@ -20,11 +18,8 @@ const Login = () => {
             password: ''
         }
     })
-    const { login } = useAuthStore()
-
     const onSubmit = async (values: LoginFormTypes) => {
         console.log(values)
-        login()
     }
     const handleShowPassowrd = (value: boolean) => {
         setShowPassword(value)
@@ -32,7 +27,6 @@ const Login = () => {
     
     return (
         <>
-            <HeadingPage title='Login page' content='Login page'/>
             <form className='max-w-[400px] rounded-lg p-6' onSubmit={handleSubmit(onSubmit)}>
                 <div className='flexx mb-3 cursor-pointer' onClick={() => navigate('/')}>
                     <IoArrowBack className='text-primary text-lg mr-3'/>
