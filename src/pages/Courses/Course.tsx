@@ -97,7 +97,7 @@ const Course = () => {
                             </div>
                             {dataQuestions !== null && <QuizItem quizNumber={quizNumber} data={dataQuestions[quizNumber - 1]}/>}
                             <div className='flex-end mt-8 space-x-3'>
-                                <button className={clsx('group flexx border border-primary hover:border-transparent hover:bg-primary rounded-lg py-2 px-4 text-sm text-primary hover:text-white', quizNumber === 1 ? 'cursor-default border-transparent bg-gray-200 hover:bg-gray-200 hover:text-primary' : '')} onClick={handlePrevious}>
+                                <button className={clsx('group flexx border border-primary hover:border-transparent rounded-lg py-2 px-4 text-sm text-primary hover:text-white', quizNumber === 1 ? 'cursor-default border-transparent bg-gray-200 hover:bg-gray-200 hover:text-primary' : 'hover:bg-primary')} onClick={handlePrevious}>
                                     <IoIosArrowRoundBack className={clsx('text-xl mr-2', quizNumber === 1 ? 'group-hover:text-primary' : 'group-hover:text-white')}/>
                                     Previous
                                 </button>
