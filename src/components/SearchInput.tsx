@@ -5,8 +5,6 @@ import { useLocation } from 'react-router-dom'
 import { useSearchParams } from 'react-router-dom'
 import { IoSearch, IoClose } from "react-icons/io5"
 
-// ###CLEAR### ✅
-
 const SearchInput = () => {
     const location = useLocation()
     const [_, setSearchParams] = useSearchParams()

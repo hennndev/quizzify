@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 
-// ###CLEAR### ✅
-
 const Hero = () => {
     const navigate = useNavigate()
     return (

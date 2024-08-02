@@ -4,8 +4,6 @@ import { coursesData } from '../utils/courses'
 import { useLocation } from 'react-router-dom'
 import QuizConfigurationModal from './Modal/QuizConfigurationModal'
 
-// ###CLEAR### ✅
-
 const CourseList = () => {
     const location = useLocation()
     const queries = queryString.parse(location.search)

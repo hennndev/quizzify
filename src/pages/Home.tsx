@@ -1,8 +1,6 @@
 import Hero from '../components/Hero'
 import HeadingPage from '../components/HeadingPage'
 
-// ###CLEAR### ✅
-
 const Home = () => {
     return (
         <>

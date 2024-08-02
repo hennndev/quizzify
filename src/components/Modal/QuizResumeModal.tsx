@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Modal from 'react-modal'
 import QuizTimer from '../QuizTimer'
 import { useNavigate } from 'react-router-dom'

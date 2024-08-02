@@ -83,7 +83,7 @@ const Course = () => {
                     <div className='flex space-x-2'>
                         <div className='hidden md:flex flex-col'>
                             <QuizTimer date={timer as number}/>
-                            <QuizNavigation quizNumber={quizNumber} handleNavigateQuiz={handleNavigateQuiz}/>
+                            <QuizNavigation handleNavigateQuiz={handleNavigateQuiz}/>
                             <button className='group flexx text-primary border border-[#ccc] py-2 px-4 rounded-lg w-max mt-8 text-sm hover:bg-red-500 hover:text-white' onClick={handleOpenModalSubmit}>
                                 <IoClose className='text-red-500 group-hover:text-white text-xl mr-2'/>
                                 End Quiz

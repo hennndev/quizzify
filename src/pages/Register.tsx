@@ -4,7 +4,6 @@ import HeadingPage from '../components/HeadingPage'
 import { Link, useNavigate } from 'react-router-dom'
 import { IoArrowBack, IoMailOutline, IoLockClosedOutline, IoEyeOffOutline, IoEyeOutline } from "react-icons/io5"
 
-
 interface LoginFormTypes {
     username: string
     email: string
@@ -28,15 +27,12 @@ const Register = () => {
     const onSubmit = (values: any) => {
         console.log(values)
     }
-
     const handleShowPassowrd = (value: boolean) => {
         setShowPassword(value)
     }
-
     const handleShowPassowrdConfirmation = (value: boolean) => {
         setShowPasswordConfirmation(value)
-    }
-    
+    }  
     return (
         <>
             <HeadingPage title='Register page' content='Register page'/>

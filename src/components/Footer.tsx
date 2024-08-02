@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Footer = () => {
     return (
         <footer className='flex-center mt-auto h-[50px]'>

@@ -2,8 +2,6 @@ import CourseList from '../../components/CourseList'
 import SearchInput from '../../components/SearchInput'
 import HeadingPage from '../../components/HeadingPage'
 
-// ###CLEAR### ✅
-
 const Courses = () => {
     return (
         <>

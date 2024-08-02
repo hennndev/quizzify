@@ -1,13 +1,11 @@
-import React from 'react'
 import clsx from 'clsx'
 import { useAnswerStore } from '../store/answerStore'
 
 interface PropsTypes {
-    quizNumber: number
     handleNavigateQuiz: (value: number) => void
 }
 
-const QuizNavigation = ({quizNumber, handleNavigateQuiz}: PropsTypes) => {
+const QuizNavigation = ({handleNavigateQuiz}: PropsTypes) => {
 
     const { answers } = useAnswerStore()
     const checkAnswerIsFilled = (questNumber: number) => {
