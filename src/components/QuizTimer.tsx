@@ -14,7 +14,7 @@ const QuizTimer = ({date}: PropsTypes) => {
     const { setSubmitQuiz } = useSubmittingStore()
 
     const renderer = ({ hours, minutes, seconds, completed }: any) => {
-        if (completed) {
+        if(completed) {
             setQuizData(null)
             setSubmitQuiz(true)
             navigate('/score', {replace: true})

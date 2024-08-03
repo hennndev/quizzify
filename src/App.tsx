@@ -22,10 +22,16 @@ const App = () => {
     const { isSubmitQuiz, setSubmitQuiz } = useSubmittingStore()
 
     useEffect(() => {
-        if(isSubmitQuiz && location.pathname !== '/score') {
-            setSubmitQuiz(false)
-            setAnswers([])
-            setUsername(null)
+        const timeout = setTimeout(() => {
+            if(isSubmitQuiz && location.pathname !== '/score') {
+                setSubmitQuiz(false)
+                setAnswers([])
+                setUsername(null)
+            }
+        }, 3000)
+
+        return () => {
+            clearTimeout(timeout)
         }
     }, [isSubmitQuiz, location.pathname])
     
