@@ -23,12 +23,16 @@ const Score = () => {
     
     useEffect(() => {
         if(isSubmitQuiz) {
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 setSubmitQuiz(false)
                 setAnswers([])
                 setUsername(null)
                 navigate('/courses')
             }, 20000);
+
+            return () => {
+                clearTimeout(timer)
+            }
         }
     }, [isSubmitQuiz])
 
